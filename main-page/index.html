@@ -37,22 +37,46 @@
 
         <div id="search-form">
           <form action="" id="place-form">
+            <label for="">Place</label>
             <i class="fas fa-street-view"></i>
-            <input type="text" placeholder="Where do you want go?" id="place" />
+            <input
+              type="text"
+              onfocus="this.value=''"
+              placeholder="Where do you want go?"
+              id="place"
+            />
           </form>
 
           <div class="row">
             <div class="time-box">
               <form action="" id="arrive-form">
+                <label for="">Arrive</label>
                 <i class="fa fa-calendar" aria-hidden="true"></i>
-
-                <input type="text" placeholder="Arrive" id="arrive" />
+                <input
+                  onfocus="this.value=''"
+                  type="date"
+                  name="trip-start"
+                  placeholder="Arrive"
+                  id="arrive"
+                  value=""
+                  min="2020-03-01"
+                />
               </form>
 
               <form action="" id="depart-form">
+                <label for="">Depart</label>
                 <i class="fa fa-calendar" aria-hidden="true"></i>
-
-                <input type="text" placeholder="Depart" id="depart" />
+                <input
+                  onfocus="this.value=''"
+                  type="date"
+                  name="trip-end"
+                  placeholder="Depart"
+                  id="depart"
+                  value=""
+                  min="2020-03-01"
+                  required
+                  pattern="\d{4}-\d{2}-\d{2}"
+                />
               </form>
             </div>
             <form action="" id="submit" class="btn-search">
@@ -62,11 +86,25 @@
           </div>
         </div>
       </section>
+      <!-- <section class="photo-credits">
+        Image by
+        <a
+          href="https://pixabay.com/users/tpsdave-12019/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1993704"
+          >David Mark</a
+        >
+        from
+        <a
+          href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1993704"
+          >Pixabay</a
+        >
+      </section> -->
     </header>
     <main>
       <section id="about"></section>
       <section id="gallery"></section>
     </main>
     <footer></footer>
+
+    <script src="main.js"></script>
   </body>
 </html>
