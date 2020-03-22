@@ -43,7 +43,7 @@ p {
 .navbar {
   display: flex;
   flex-direction: row;
-  padding: 0.75rem 1.75rem;
+  padding: 0.75rem 0.75rem;
   justify-content: space-between;
   align-items: center;
 }
@@ -70,6 +70,7 @@ p {
   justify-content: center;
   text-align: center;
   color: white;
+  padding-bottom: 3.5rem;
 }
 
 .text {
@@ -201,17 +202,36 @@ input[type="date"]:focus {
   margin-left: 1rem;
   font-size: 1.1rem;
 }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3.5rem;
+  color: white;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+  padding-bottom: 0.25rem;
+}
+footer a {
+  color: white;
+}
 @media only screen and (orientation: landscape) {
   .welcome-section h2 {
     font-size: 1.5rem;
   }
 }
-@media (min-width: 750px) {
+@media (min-width: 739px) {
   .welcome-section h2 {
     font-size: 40px;
     line-height: 44px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
   }
+
   #search-form {
     margin-left: 8%;
     margin-right: 8%;
