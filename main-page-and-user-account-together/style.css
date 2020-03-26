@@ -244,7 +244,7 @@ footer a {
 }
 
 #weather-box {
-  max-width: 750px;
+  max-width: 550px;
   margin: 0 auto; 
   float: none;
   background-color: rgb(232, 232, 232);
@@ -289,7 +289,7 @@ footer a {
   grid-template-columns: repeat(2, 1fr);
   column-gap: 5px;
   row-gap: 5px;
-  max-width: 750px;
+  max-width: 550px;
   margin: 0 auto; 
   float: none;
   margin-top: 20px; 
@@ -311,7 +311,7 @@ footer a {
 
 #todo-list-container {
   padding: 2px 0px 0px 0px;
-  max-width: 750px;
+  max-width: 550px;
   margin: 0 auto;
   margin-top: 20px;
   float: none;
