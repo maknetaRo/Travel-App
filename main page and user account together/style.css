@@ -1,0 +1,145 @@
+html{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+#city-name {
+    margin-top: 20px;
+    font-size: 65px;
+}
+.done {
+    color: green;
+    font-weight: 600;
+    font-style: italic;
+}
+
+#weather-box {
+    border: 1px solid black;
+    margin: 10px 50px 20px 50px;
+    background-color: wheat;
+    border-radius: 8px;
+}
+
+#weathers{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+}
+
+.weather{
+    background-color: rgb(224, 247, 255);
+    padding: 5px 5px 5px 5px;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 12px 0px 12px 0px;
+    margin-bottom: 30px;
+}
+
+.firstday{
+    margin-left: 250px;
+}
+
+.finalday{
+    margin-right: 250px;
+}
+
+#check-more {
+    font-size: 18px;
+    font-style: italic;
+}
+
+.city-boxes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+    margin: 0px 50px 20px 50px;
+  }
+
+  .box:hover{
+    background-color: rgb(250, 114, 64);
+  }
+
+  .box{
+    padding: 10px 10px 10px 10px;
+    font-size: 20px;
+    background-color: rgb(254, 205, 188);
+    border: 2px solid rgb(250, 101, 47);
+    border-radius: 8px;
+  }
+
+  #todo-list-container {
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: 0px 50px 20px 50px;
+    background-color: wheat;
+  }
+
+  #cant-forget-title {
+    font-size: 28px;
+  }
+
+  #different-color{
+      background-color:  rgb(252, 243, 225);
+      padding: 30px 0px 30px 0px;
+  }
+
+  #add-todo-btn {
+    background-color: white;
+    height: 40px;
+    width: 70px;
+    border: 1px solid black;
+    border-radius: 50px;
+    font-size: 22px;
+  }
+  #add-todo-btn:hover{
+      background-color: wheat;
+  }
+
+  input{
+    height: 40px;
+    padding-left: 18px;
+    width: 300px;
+    font-size: 22px;
+    border-radius: 50px;
+    border: 1px solid black;
+    margin-right: 10px;
+  }
+
+  input::placeholder {
+    font-style: italic;
+  }
+
+  #todo-list {
+      list-style-type: none;
+      font-size: 30px;
+  }
+
+  a {
+     text-decoration: none;
+     color: black;
+  }
+
+  .done-btn{
+      background-color: rgb(164, 232, 164);
+      height: 30px;
+      width: 40px;
+      border-radius: 10px;
+      font-size: 20px;
+  }
+
+  .delete-btn {
+    background-color: rgb(201, 114, 114);
+    height: 30px;
+    width: 40px;
+    border-radius: 10px;
+    font-size: 20px;
+  }
+
+  .todo {
+    margin-bottom: 5px;
+
+  }
