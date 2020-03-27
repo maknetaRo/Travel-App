@@ -13,6 +13,12 @@ body {
   font-size: 16px;
   line-height: 1.5;
   font-family: "Lato", sans-serif;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
+    url(img/maldives.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
 }
 h1,
 h2,
@@ -21,18 +27,6 @@ p {
   margin-top: 0;
 }
 
-.welcome-section {
-  margin: 0;
-  padding: 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
-    url(img/maldives.jpg);
-
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
 .welcome-section h2 {
   font-size: 24px;
   line-height: 32px;
@@ -166,8 +160,6 @@ input[type="date"]:focus {
   color: black;
 }
 .btn-search {
-  /* background: #14a76c; */
-  /* background: rgb(250, 101, 47); */
   background: #cc4ac3;
   display: flex;
   flex-direction: row;
@@ -220,50 +212,44 @@ footer {
 footer a {
   color: white;
 }
+/* user account settings */
 #user-account {
-  margin: 0;
-  padding: 0;
+  width: 100%;
   text-align: center;
-  justify-content: center;
-  align-items: center;
-  background-image: url(./img/travel.jpg);
-  padding-bottom: 0px;
-  padding-top: 250px;
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -25%);
 }
 
 #city-name {
   margin-top: 10px;
-  font-size: 80px;
-  padding: 40px 0px 40px 0px;
+  font-size: 60px;
+  padding: 40px 0px;
   font-family: Oxygen;
 }
 
 #weather-box {
   max-width: 750px;
-  margin: 0 auto; 
+  margin: 0 auto;
   float: none;
-  background-color: rgb(232, 232, 232);
+  background-color: rgba(232, 232, 232, 0.9);
   border-radius: 5px;
 }
 
-#weathers{
+#weathers {
   max-width: 1000px;
-  margin: 0 auto; 
-  float: none; 
+  margin: 0 auto;
+  float: none;
   display: flex;
   grid-template-columns: repeat(2, 1fr);
   font-style: italic;
   justify-content: center;
 }
 
-.weather{
+.weather {
   background-color: rgb(242, 242, 242);
-  border: .5px solid gray;
+  border: 0.5px solid gray;
   font-size: 15px;
   margin: 0px 60px 0px 60px;
   padding: 18px 8px 18px 8px;
@@ -281,7 +267,7 @@ footer a {
   text-decoration: none;
   color: #cc4ac3;
   font-weight: bolder;
-  font-size: 18px
+  font-size: 18px;
 }
 
 .city-boxes {
@@ -290,16 +276,12 @@ footer a {
   column-gap: 5px;
   row-gap: 5px;
   max-width: 750px;
-  margin: 0 auto; 
+  margin: 0 auto;
   float: none;
-  margin-top: 20px; 
+  margin-top: 20px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
-
-.box:hover {
-  background-color: #cc4ac3;
-  color: whitesmoke;
-}
-
 .box {
   padding: 15px 15px 15px 15px;
   border-radius: 8px;
@@ -307,6 +289,12 @@ footer a {
   background-color: rgb(232, 232, 232);
   color: #cc4ac3;
   cursor: pointer;
+  border: none;
+  outline: none;
+}
+.box:hover {
+  background-color: #cc4ac3;
+  color: whitesmoke;
 }
 
 #todo-list-container {
@@ -318,11 +306,14 @@ footer a {
   background-color: rgb(205, 130, 98);
   border-radius: 5px;
   text-align: center;
+  margin-bottom: 3rem;
 }
 
 #inputs {
   display: flex;
-  padding-bottom: 40px;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
   padding-top: 40px;
   text-align: center;
   justify-content: center;
@@ -337,36 +328,37 @@ footer a {
 
 #add-todo-btn {
   background-color: #cc4ac3;
-  height: 32px;
-  width: 70px;
-  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  text-align: center;
+  max-width: 300px;
+  font-size: 0.75rem;
   color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
-  color: white;
   border-radius: 100px;
   outline: none;
   font-weight: 700;
   cursor: pointer;
   border: none;
   white-space: nowrap;
+  margin: 1.5rem auto;
+  width: 100%;
+  overflow: visible;
+  line-height: 18px;
 }
 
 #add-todo-btn:hover {
-    background: #a33b9c;
-    color: white;
+  background: #a33b9c;
+  color: white;
 }
 
 #todo-input-bar {
-  height: 32px;
-  padding-left: 10px;
-  width: 300px;
-  font-size: 15px;
-  border: 1px solid #ddddde;
-  margin-right: 10px;
-}
-
-#todo-input-bar:hover{
-  border: 2px solid #b8b8b8;
+  max-width: 300px;
+  width: 100%;
+  padding-left: 1rem;
 }
 
 #todo-input-bar::placeholder {
@@ -374,21 +366,21 @@ footer a {
 }
 
 #todo-list {
-    list-style-type: none;
-    font-size: 25px;
-    padding-bottom: 20px;
-    background-color: rgb(232, 232, 232);
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
+  list-style-type: none;
+  font-size: 25px;
+  padding-bottom: 4rem;
+  background-color: rgb(232, 232, 232);
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .done-btn {
-    margin-left: 10px;
-    background-color: #98f3b5;
-    height: 28px;
-    width: 38px;
-    border-radius: 10px;
-    font-size: 18px;
+  margin-left: 10px;
+  background-color: #98f3b5;
+  height: 28px;
+  width: 38px;
+  border-radius: 10px;
+  font-size: 18px;
 }
 
 .delete-btn {
@@ -414,11 +406,27 @@ footer a {
   font-style: italic;
 }
 @media only screen and (orientation: landscape) {
-  .welcome-section h2 {
+  .welcome-section .title {
     font-size: 1.5rem;
+    padding-top: 3rem;
+  }
+  .navbar a {
+    font-size: 1rem;
+    padding-top: 0;
+  }
+  .navbar {
+    padding-top: 0;
+    margin-top: 0;
+  }
+  footer {
+    height: 1rem;
+    margin-bottom: -1rem;
+    padding-bottom: 0;
+    align-items: baseline;
+    padding-top: 1rem;
   }
 }
-@media (min-width: 739px) {
+@media (min-width: 741px) {
   .welcome-section h2 {
     font-size: 40px;
     line-height: 44px;
@@ -478,6 +486,23 @@ footer a {
   .btn-search {
     margin-top: 20px;
   }
+  footer {
+    padding-bottom: 1rem;
+  }
+  #inputs {
+    display: flex;
+    flex-direction: row;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  #add-todo-btn {
+    max-width: 200px;
+    width: 100%;
+  }
+  #todo-input-bar {
+    max-width: 500px;
+    margin-right: 1rem;
+  }
 }
 
 @media (min-width: 1185px) {
@@ -522,7 +547,7 @@ footer a {
   .btn-search {
     margin-top: 25px;
   }
-  .city-boxes{
+  .city-boxes {
     grid-template-columns: repeat(4, 1fr);
   }
 }
