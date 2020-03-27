@@ -220,6 +220,199 @@ footer {
 footer a {
   color: white;
 }
+#user-account {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./img/travel.jpg);
+  padding-bottom: 0px;
+  padding-top: 250px;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#city-name {
+  margin-top: 10px;
+  font-size: 80px;
+  padding: 40px 0px 40px 0px;
+  font-family: Oxygen;
+}
+
+#weather-box {
+  max-width: 750px;
+  margin: 0 auto; 
+  float: none;
+  background-color: rgb(232, 232, 232);
+  border-radius: 5px;
+}
+
+#weathers{
+  max-width: 1000px;
+  margin: 0 auto; 
+  float: none; 
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+  font-style: italic;
+  justify-content: center;
+}
+
+.weather{
+  background-color: rgb(242, 242, 242);
+  border: .5px solid gray;
+  font-size: 15px;
+  margin: 0px 60px 0px 60px;
+  padding: 18px 8px 18px 8px;
+  border-radius: 5px;
+}
+
+#check-more {
+  margin-top: 40px;
+  font-size: 15px;
+  font-style: italic;
+  padding-bottom: 20px;
+}
+
+#more-weather {
+  text-decoration: none;
+  color: #cc4ac3;
+  font-weight: bolder;
+  font-size: 18px
+}
+
+.city-boxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 5px;
+  row-gap: 5px;
+  max-width: 750px;
+  margin: 0 auto; 
+  float: none;
+  margin-top: 20px; 
+}
+
+.box:hover {
+  background-color: #cc4ac3;
+  color: whitesmoke;
+}
+
+.box {
+  padding: 15px 15px 15px 15px;
+  border-radius: 8px;
+  font-size: 18px;
+  background-color: rgb(232, 232, 232);
+  color: #cc4ac3;
+  cursor: pointer;
+}
+
+#todo-list-container {
+  padding: 2px 0px 0px 0px;
+  max-width: 750px;
+  margin: 0 auto;
+  margin-top: 20px;
+  float: none;
+  background-color: rgb(205, 130, 98);
+  border-radius: 5px;
+  text-align: center;
+}
+
+#inputs {
+  display: flex;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  text-align: center;
+  justify-content: center;
+  background-color: rgb(232, 232, 232);
+}
+
+#cant-forget-title {
+  font-size: 25px;
+  padding: 0;
+  margin: 15px;
+}
+
+#add-todo-btn {
+  background-color: #cc4ac3;
+  height: 32px;
+  width: 70px;
+  font-size: 15px;
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 100px;
+  outline: none;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  white-space: nowrap;
+}
+
+#add-todo-btn:hover {
+    background: #a33b9c;
+    color: white;
+}
+
+#todo-input-bar {
+  height: 32px;
+  padding-left: 10px;
+  width: 300px;
+  font-size: 15px;
+  border: 1px solid #ddddde;
+  margin-right: 10px;
+}
+
+#todo-input-bar:hover{
+  border: 2px solid #b8b8b8;
+}
+
+#todo-input-bar::placeholder {
+  font-style: italic;
+}
+
+#todo-list {
+    list-style-type: none;
+    font-size: 25px;
+    padding-bottom: 20px;
+    background-color: rgb(232, 232, 232);
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.done-btn {
+    margin-left: 10px;
+    background-color: #98f3b5;
+    height: 28px;
+    width: 38px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.delete-btn {
+  background-color: #cc4ac3;
+  height: 28px;
+  width: 38px;
+  border-radius: 10px;
+  font-size: 18px;
+  color: white;
+}
+
+.todo {
+  margin-bottom: 5px;
+}
+
+.hide {
+  display: none;
+}
+
+.done {
+  color: rgb(40, 170, 114);
+  font-weight: 600;
+  font-style: italic;
+}
 @media only screen and (orientation: landscape) {
   .welcome-section h2 {
     font-size: 1.5rem;
@@ -328,6 +521,9 @@ footer a {
   }
   .btn-search {
     margin-top: 25px;
+  }
+  .city-boxes{
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 

@@ -19,7 +19,7 @@
     ></script>
   </head>
   <body>
-    <div class="welcome-section">
+    <div id='main-page' class="welcome-section">
       <nav class="navbar">
         <h1 class="logo"><span></span> <a href="#">TravelApp</a></h1>
 
@@ -102,9 +102,33 @@
           <p>Made for Chingu Voyage12</p>
         </section>
       </footer>
-      <p>Hello World</p>
     </div>
+    <div id='user-account' class='hide'>
+      <div id='weather-box'>
+          <h1 id='city-name'>City</h1>
+          <div id='weathers'>
+              <div id='initial-weather' class='weather firstday'>1st day weather</div>
+              <div id='final-weather' class='weather finalday'>last day weather</div>
+          </div>
+          <p id='check-more'>Check more about weather <a href='' id='more-weather'>here</a></p>
+      </div>
+      <div class='city-boxes'>
+          <button id="thingstodo-btn"class= 'things-to-do-box box'><i class="fas fa-walking"></i>&nbsp;&nbsp;&nbsp;Things to do</button>
+          <button id="hotels-btn" class='hotels-box box'><i class="fas fa-concierge-bell"></i>&nbsp;&nbsp;&nbsp;Hotels</button>
+          <button id="restaurants-btn"class='restaurants-box box'><i class="fas fa-utensils"></i>&nbsp;&nbsp;&nbsp;Restaurants</button>
+          <button id="monuments-btn"class='monuments-box box'><i class="fas fa-landmark"></i></i>&nbsp;&nbsp;&nbsp;Monuments</button>
+    </div>
+      <div id='todo-list-container'>
+          <h3 id='cant-forget-title'>Can't forget...</h3>
+            <div id='inputs'>
+              <input type='text' id='todo-input-bar' placeholder="Add what you can't forget">
+              <button id='add-todo-btn'>Add</button>
+            </div>  
+              <ul id='todo-list'>
 
+              </ul>
+      </div>
+    </div>
     <script src="main.js"></script>
   </body>
 </html>
