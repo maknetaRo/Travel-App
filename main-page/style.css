@@ -219,7 +219,7 @@ footer a {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -40%);
+  transform: translate(-50%, -30%);
 }
 
 #city-name {
@@ -405,33 +405,7 @@ footer a {
   font-weight: 600;
   font-style: italic;
 }
-@media only screen and (orientation: landscape) {
-  .welcome-section .title {
-    font-size: 1.5rem;
-    padding-top: 3rem;
-  }
-  .navbar a {
-    font-size: 1rem;
-    padding-top: 0;
-  }
-  .navbar {
-    padding-top: 0;
-    margin-top: 0;
-  }
-  .hero-section {
-    transform: translate(-50%, -30%);
-  }
-  footer {
-    height: 1rem;
-    margin-bottom: -6.5rem;
-    padding-bottom: 0;
-    align-items: baseline;
-    padding-top: 1rem;
-  }
-  #user-account {
-    transform: translate(-50%, -20%);
-  }
-}
+
 @media (min-width: 741px) {
   .welcome-section h2 {
     font-size: 40px;
@@ -514,7 +488,33 @@ footer a {
     margin-right: 1rem;
   }
 }
-
+@media screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+  .welcome-section .title {
+    font-size: 1.5rem;
+    padding-top: 3rem;
+  }
+  .navbar a {
+    font-size: 1rem;
+    padding-top: 0;
+  }
+  .navbar {
+    padding-top: 0;
+    margin-top: 0;
+  }
+  .hero-section {
+    transform: translate(-50%, -30%);
+  }
+  footer {
+    height: 1rem;
+    margin-bottom: -6.5rem;
+    padding-bottom: 0;
+    align-items: baseline;
+    padding-top: 1rem;
+  }
+  #user-account {
+    transform: translate(-50%, -10%);
+  }
+}
 @media (min-width: 1185px) {
   .hero-section {
     max-width: 1000px;
