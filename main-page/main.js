@@ -15,6 +15,10 @@ const restaurantBtn = document.getElementById('restaurants-btn');
 const thingstodoBtn = document.getElementById('thingstodo-btn');
 const monumentsBtn = document.getElementById('monuments-btn');
 const showInfo = document.getElementById('show-info');
+const cityBoxesBtn = Array.from(document.getElementsByClassName("box"));
+const closeBar = document.getElementById("close-bar");
+const showInfoDiv = document.getElementById("showInfoDiv");
+
 
 
 /*placeInput.addEventListener("keyup", function(e) {
@@ -67,62 +71,44 @@ function eventListeners() {
     document.body.style.backgroundImage = "url(./img/travel.jpg)";
   });
 
-  thingstodoBtn.addEventListener('click', () => {
-    if (showInfo.classList.contains('hide')) {
-      showInfo.classList.remove('hide')
+  cityBoxesBtn.forEach(box => box.addEventListener('click', (e) => {
+    showInfoDiv.classList.remove("hide");
+
+    if (e.target.value === "thingstodo") {
       showInfo.innerHTML = `
       <iframe id="thingstodo-frame"
       width="1200"
-      height="1000"
+      height="700"
       src="https://foursquare.com/explore?cat=arts&mode=url&near=${placeInput.value}">
       </iframe>`
-    } else {
-      showInfo.classList.add('hide')
-    }
-  });
-
-  restaurantBtn.addEventListener('click', () => {
-    if (showInfo.classList.contains('hide')) {
-      showInfo.classList.remove('hide')
+    }else if (e.target.value === "restaurants") {
       showInfo.innerHTML = `
       <iframe id="restaurants-frame"
       width="1200"
-      height="1000"
+      height="700"
       src="https://foursquare.com/explore?cat=food&mode=url&near=${placeInput.value}">
     </iframe>`
-    } else {
-      showInfo.classList.add('hide')
-    }
-  });
-
-  monumentsBtn.addEventListener('click', () => {
-    if (showInfo.classList.contains('hide')) {
-      showInfo.classList.remove('hide')
+    } else if (e.target.value === "monuments") {
       showInfo.innerHTML = `
       <iframe id="monuments-frame"
       width="1200"
-      height="1000"
+      height="700"
       src="https://foursquare.com/explore?mode=url&near=${placeInput.value}&q=Monument">
     </iframe>`
-    } else {
-      showInfo.classList.add('hide')
-    }
-  })
-
-  hotelBtn.addEventListener('click', () => {
-    if (showInfo.classList.contains('hide')) {
-      showInfo.classList.remove('hide')    
+    }else if (e.target.value ==="hotels") {
       showInfo.innerHTML = `
       <iframe id="hotels-frame"
       width="1200"
-      height="1000"
+      height="700"
       src="https://foursquare.com/explore?mode=url&near=${placeInput.value}&q=Hotel">
     </iframe>`
-    } else {
-      showInfo.classList.add('hide')
-    }
+    }}));
+
+  closeBar.addEventListener('click', () => {
+    showInfoDiv.classList.add("hide");
   })
-}
+  }
+
 
 
 function startFunction() {
