@@ -561,7 +561,12 @@ footer a {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-
+#close-bar {
+  width: 1200px;
+  color: white;
+  background-color: #cc4ac3;
+  height: 30px;
+}
 /* colors */
 /* background: #fccd04; */
 /* background: #ffb48f; */
