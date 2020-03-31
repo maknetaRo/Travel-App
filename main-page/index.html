@@ -106,7 +106,8 @@
     </div>
     <!-- user account  -->
     <div id='user-account' class='hide'>
-      <div id='weather-box'>
+      <div class="upper-container">
+        <div id='weather-box'>
           <h1 id='city-name'>City</h1>
           <div id='weathers'>
               <div id='initial-weather' class='weather firstday'>1st day weather</div>
@@ -120,20 +121,21 @@
           <button value="restaurants" id="restaurants-btn"class='restaurants-box box'><i class="fas fa-utensils"></i>&nbsp;&nbsp;&nbsp;Restaurants</button>
           <button value="monuments" id="monuments-btn"class='monuments-box box'><i class="fas fa-landmark"></i></i>&nbsp;&nbsp;&nbsp;Monuments</button>
     </div>
+      </div>
+  
     <div id="showInfoDiv" class="hide">
-    <div id="show-info"></div>
-    <button id="close-bar" <i class="fas fa-angle-double-up"></i></button>
-  </div>
-      <div id='todo-list-container'>
+        <div id="show-info"></div>
+        <button id="close-bar"><i class="fas fa-angle-double-up"></i></button>
+    </div>
+    <div id='todo-list-container'>
           <h3 id='cant-forget-title'>Can't forget...</h3>
             <div id='inputs'>
               <input type='text' id='todo-input-bar' placeholder="Add what you can't forget">
               <button id='add-todo-btn'>Add</button>
             </div>  
               <ul id='todo-list'>
-
               </ul>
-      </div>
+     </div>
     </div>
     <script src="main.js"></script>
   </body>
