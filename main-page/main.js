@@ -1,6 +1,4 @@
 const submitBtn = document.getElementById("submit");
-/*console.log("it works");
-console.log(submitBtn);*/
 const placeInput = document.forms["place-form"].querySelector("input");
 const arriveInput = document.forms["arrive-form"].querySelector("input");
 const departInput = document.forms["depart-form"].querySelector("input");
@@ -10,16 +8,14 @@ const uList = document.getElementById("todo-list");
 const placeCity = document.getElementById("city-name");
 const mainPage = document.getElementById("main-page");
 const userAccount = document.getElementById("user-account");
-const hotelBtn = document.getElementById('hotels-btn');
-const restaurantBtn = document.getElementById('restaurants-btn');
-const thingstodoBtn = document.getElementById('thingstodo-btn');
-const monumentsBtn = document.getElementById('monuments-btn');
-const showInfo = document.getElementById('show-info');
+const hotelBtn = document.getElementById("hotels-btn");
+const restaurantBtn = document.getElementById("restaurants-btn");
+const thingstodoBtn = document.getElementById("thingstodo-btn");
+const monumentsBtn = document.getElementById("monuments-btn");
+const showInfo = document.getElementById("show-info");
 const cityBoxesBtn = Array.from(document.getElementsByClassName("box"));
 const closeBar = document.getElementById("close-bar");
 const showInfoDiv = document.getElementById("showInfoDiv");
-
-
 
 /*placeInput.addEventListener("keyup", function(e) {
   const placeName = e.target.value;
@@ -71,45 +67,46 @@ function eventListeners() {
     document.body.style.backgroundImage = "url(./img/travel.jpg)";
   });
 
-  cityBoxesBtn.forEach(box => box.addEventListener('click', (e) => {
-    showInfoDiv.classList.remove("hide");
+  cityBoxesBtn.forEach(box =>
+    box.addEventListener("click", e => {
+      showInfoDiv.classList.remove("hide");
 
-    if (e.target.value === "thingstodo") {
-      showInfo.innerHTML = `
+      if (e.target.value === "thingstodo") {
+        showInfo.innerHTML = `
       <iframe id="thingstodo-frame"
       width="1200"
       height="700"
       src="https://foursquare.com/explore?cat=arts&mode=url&near=${placeInput.value}">
-      </iframe>`
-    }else if (e.target.value === "restaurants") {
-      showInfo.innerHTML = `
+      </iframe>`;
+      } else if (e.target.value === "restaurants") {
+        showInfo.innerHTML = `
       <iframe id="restaurants-frame"
       width="1200"
       height="700"
       src="https://foursquare.com/explore?cat=food&mode=url&near=${placeInput.value}">
-    </iframe>`
-    } else if (e.target.value === "monuments") {
-      showInfo.innerHTML = `
+    </iframe>`;
+      } else if (e.target.value === "monuments") {
+        showInfo.innerHTML = `
       <iframe id="monuments-frame"
       width="1200"
       height="700"
       src="https://foursquare.com/explore?mode=url&near=${placeInput.value}&q=Monument">
-    </iframe>`
-    }else if (e.target.value ==="hotels") {
-      showInfo.innerHTML = `
+    </iframe>`;
+      } else if (e.target.value === "hotels") {
+        showInfo.innerHTML = `
       <iframe id="hotels-frame"
       width="1200"
       height="700"
       src="https://foursquare.com/explore?mode=url&near=${placeInput.value}&q=Hotel">
-    </iframe>`
-    }}));
+    </iframe>`;
+      }
+    })
+  );
 
-  closeBar.addEventListener('click', () => {
+  closeBar.addEventListener("click", () => {
     showInfoDiv.classList.add("hide");
-  })
-  }
-
-
+  });
+}
 
 function startFunction() {
   let inputBarValue = inputBar.value;
