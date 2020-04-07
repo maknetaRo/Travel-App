@@ -218,7 +218,7 @@ footer a {
   text-align: center;
   justify-content: center;
   margin: 0 auto;
-  padding-top: 20%;
+  padding-top: 18%;
   min-height: 100%;
 }
 
@@ -249,9 +249,10 @@ footer a {
 
 .weather {
   background-color: rgb(242, 242, 242);
+  min-width: 150px;
   border: 0.5px solid gray;
   font-size: 15px;
-  margin: 0px 60px 0px 60px;
+  margin: 0px 10px 0px 10px;
   padding: 18px 8px 18px 8px;
   border-radius: 5px;
 }
@@ -486,6 +487,9 @@ footer a {
     max-width: 500px;
     margin-right: 1rem;
   }
+  .weather {
+    margin: 0px 60px 0px 60px;
+  }
 }
 
 @media screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
@@ -521,33 +525,41 @@ footer a {
     padding-left: 0;
   }
   #search-form {
-    display: flex;
-    flex-direction: row;
     width: 100%;
     border-radius: 8px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
-    flex: 1 1;
     margin: auto;
-    align-items: center;
+
     padding: 8px 18px;
   }
+  #main-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  #place-form {
+    padding-right: 0.5rem;
+  }
+
   #place {
     min-width: 400px;
-    margin-right: 0.25rem;
+    margin-right: 0.5rem;
     margin-top: 3px;
+    padding-right: 0.5rem;
   }
-  .row {
-    width: 40%;
-    flex: 1 1 268px;
+
+  #arrive-form,
+  #depart-form {
+    width: 20%;
+    padding-right: 0.5rem;
+    box-shadow: none;
   }
-  #arrive,
-  #depart {
-    width: 100%;
-  }
+
   .btn-search {
-    margin-top: 0;
-    margin-left: 2rem;
-    max-width: 168px;
+    margin: 0 2rem;
+    min-width: 150px;
+    max-width: 220px;
   }
   #place-form i.fa-street-view {
     top: 45px;
