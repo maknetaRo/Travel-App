@@ -16,4 +16,4 @@ Add-project-description-here | Voyage-17 | https://chingu.io/ | Twitter: https:/
 ### Overview
 
 This application was created in HTML, CSS and vanilla JavaScript and uses openweather API and foursquare API.
-The website was created for the Chingu Voyage 12 Toucans Team. 
+The website was created for the Chingu Voyage 17.
