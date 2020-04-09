@@ -8,7 +8,9 @@ Add-project-description-here | Voyage-17 | https://chingu.io/ | Twitter: https:/
 ## Authors
 
 *[@utopia90](https://github.com/utopia90)
+
 *[@zafra89](https://github.com/zafra89)
+
 *[@maknetaRo - Magdalena Rosłaniec ](https://github.com/maknetaRo)
 
 ### Overview
