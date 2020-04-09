@@ -5,13 +5,13 @@ Add-project-description-here | Voyage-17 | https://chingu.io/ | Twitter: https:/
 
 ## Chingu Voyage 17 - Tier 1 - Travel App
 
-## Author
+## Authors
 
-[@utopia90](https://github.com/utopia90)
-[@zafra89](https://github.com/zafra89)
-[@maknetaRo - Magdalena Rosłaniec ](https://github.com/maknetaRo)
+*[@utopia90](https://github.com/utopia90)
+*[@zafra89](https://github.com/zafra89)
+*[@maknetaRo - Magdalena Rosłaniec ](https://github.com/maknetaRo)
 
 ### Overview
 
-This app was created in HTML, CSS and vanilla JavaScript and uses openweather API and foursquare API.
+This application was created in HTML, CSS and vanilla JavaScript and uses openweather API and foursquare API.
 The website was created for the Chingu Voyage 12 Toucans Team. 
