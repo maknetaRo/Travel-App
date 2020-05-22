@@ -6,9 +6,17 @@
 <div id='user-account' class="city">
     <div class="upper-container">
       <div id='weather-box'>
-        <h1 id='city-name'>City</h1>
+        <h1 id='city-name'>{{ city_weather.city }}</h1>
         <div id='weathers'>
-            <div id='initial-weather' class='weather firstday'></div>
+            <div id='initial-weather' class='weather firstday'>
+            
+              <figure class="image is-50x50">
+                <img src="http://openweathermap.org/img/w/{{ city_weather.icon }}.png" alt="weather image">
+              </figure>
+              <span>{{ city_weather.temperature }} C</span>
+              <br>
+              <span>{{ city_weather.description }}</span>
+            </div>
             <div id='final-weather' class='weather finalday'></div>
         </div>
         <p id='check-more'>Check more about weather <a href='https://openweathermap.org/city' target="_blank" id='more-weather'>here</a></p>

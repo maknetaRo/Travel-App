@@ -535,7 +535,7 @@ footer a {
     padding-left: 0;
   }
   #search-form {
-    width: 100%;
+    width: 1000px;
     border-radius: 8px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
     margin: auto;
@@ -551,10 +551,10 @@ footer a {
   }
   #place-form {
     padding-right: 0.5rem;
+    min-width: 35%;
   }
 
   #place {
-    min-width: 310px;
     margin-right: 0.5rem;
     margin-top: 3px;
     padding-right: 0.5rem;

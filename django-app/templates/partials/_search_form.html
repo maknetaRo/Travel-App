@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
 <div id="search-form">
   <form action="{% url 'city' %}" id="main-form">
-    {% csrf_token %}
+    {% csrf_token %} {{ form.name }}
     <div id="place-form">
       <label for="">Place</label>
       <i class="fas fa-street-view"></i>
