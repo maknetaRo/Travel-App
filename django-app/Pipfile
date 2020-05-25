@@ -9,6 +9,7 @@ black = "*"
 [packages]
 django = "<3.0"
 requests = "*"
+selenium = "<4"
 
 [requires]
 python_version = "3.7"

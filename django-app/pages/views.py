@@ -14,9 +14,8 @@ api = {
 
 
 class IndexView(generic.TemplateView):
-    form = TravelSetupForm
+
     template_name = "pages/index.html"
-    success_url = "city"
 
 
 def city(request):
