@@ -13,7 +13,7 @@ api = {
 # city = "Las Vegas"
 
 
-class IndexView(generic.TemplateView):
+class MainView(generic.TemplateView):
 
     template_name = "pages/index.html"
 
