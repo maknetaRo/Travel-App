@@ -1,0 +1,28 @@
+{% extends "base.html" %} {% load static %}
+<!-- title -->
+{% block title %}Log-in{% endblock %}
+
+<!-- login form -->
+{% block content %}
+<section class="login-section">
+  <div class="card">
+    <figure class="avatar">
+      <img src="{% static 'img/user.png' %}" alt="" />
+    </figure>
+
+    {% if form.errors %}
+    <p>Your username and password didn't match. Please try again.</p>
+    {% else %}
+    <h2 class="card-title">Login to Your Account</h2>
+    {% endif %}
+    <form method="POST" action="{% url 'login' %}">
+      {{ form.as_p }} {% csrf_token %}
+      <div id="login" class="btn-login">
+        <input type="hidden" name="next" value="{{ next }}" />
+        <p><input type="submit" value="Log In" class="btn-text" /></p>
+      </div>
+    </form>
+  </div>
+</section>
+
+{% endblock %}

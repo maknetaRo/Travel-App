@@ -40,6 +40,7 @@ p {
   padding: 0.75rem 0.75rem;
   justify-content: space-between;
   align-items: center;
+  font-size: 1.05rem;
 }
 .main-links {
   display: flex;
@@ -54,6 +55,32 @@ p {
   color: rgba(255, 255, 255);
   text-decoration: none;
 }
+.user {
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: row;
+  padding-right: 1.5rem;
+  align-items: center;
+}
+.user-name {
+  padding-right: 1.5rem;
+}
+.btn-transp {
+  border: 2px solid #cc4ac3;
+  padding: 0.35rem 1rem;
+  background: transparent;
+  font-size: 1.05rem;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
+}
+.btn-transp:hover {
+  background-color: #cc4ac3;
+  color: rgb(255, 255, 255);
+}
+
+/* Login page  */
+.login-section,
 .hero-section {
   position: absolute;
   top: 50%;
@@ -63,6 +90,41 @@ p {
   width: 100%;
   justify-content: center;
   text-align: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  min-width: 350px;
+  width: 500px;
+  height: 500px;
+  background: rgba(232, 232, 232, 0.9);
+  border-radius: 6px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.avatar {
+  max-width: 60px;
+  padding-bottom: 2rem;
+}
+
+.avatar img {
+  width: 100%;
+}
+
+.card-title {
+  padding-bottom: 1rem;
+}
+
+/* dashboard */
+.dashboard {
+  text-align: center;
+}
+
+.hero-section {
   color: white;
   padding-bottom: 3.5rem;
 }
@@ -159,7 +221,8 @@ input[type="date"]:focus {
   width: 100%;
   color: black;
 }
-.btn-search {
+.btn-search,
+.btn-login {
   background: #cc4ac3;
   display: flex;
   flex-direction: row;

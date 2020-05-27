@@ -27,6 +27,10 @@
     ></script>
   </head>
   <body>
+    <!-- Nav Bar -->
+    {% include 'partials/_navbar.html' %}
+
+    <!-- Main Content -->
     {% block content %} {% endblock %}
 
     <script src="{% static 'js/app.js' %}"></script>
