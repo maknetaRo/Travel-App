@@ -1,22 +1,21 @@
 {% extends "base.html" %} {% load static %}
 
 <!-- Title -->
-{% block title %}Log-in{% endblock %}
+{% block title %}Rgister{% endblock %}
 
 <!-- login form -->
 
 {% block content %}
-
 <section class="login-section">
   <div class="card">
     <figure class="avatar">
       <img src="{% static 'img/user.png' %}" alt="" />
     </figure>
-    <h2 class="card-title">Login to Your Account</h2>
+    <h2 class="card-title">Register</h2>
     <form method="POST">
       {{ form.as_p }} {% csrf_token %}
       <div id="login" class="btn-login">
-        <p><input type="submit" value="Log In" class="btn-text" /></p>
+        <p><input type="submit" value="Register" class="btn-text" /></p>
       </div>
     </form>
   </div>

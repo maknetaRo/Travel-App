@@ -1,19 +1,20 @@
 <nav class="navbar">
-  <span class="logo"> <a href="{% url 'index' %}">TravelApp</a></span>
-  <span class="user">
+  <span class="logo"> <a href="{% url 'main' %}">TravelApp</a></span>
+  <ul class="user">
     {% if request.user.is_authenticated %}
-    <p class="user-name">
+    <li class="user-name">
       Hello {{ request.user.username }},
-    </p>
+    </li>
+    <li class="btn-transp">
+      <a href="{% url 'logout' %}">Logout</a>
+    </li>
 
-    <button class="btn-transp">
-      <a href="{% url 'logout' %}?next={{request.path}}">Logout</a>
-    </button>
     {% else %}
-    <button class="btn-transp">
-      <a href="{% url 'login' %}?next={{request.path}}">Log-in</a>
-    </button>
+    <li class="register-link"><a href="#">Register</a></li>
+    <li class="btn-transp">
+      <a href="{% url 'login' %}">Log-in</a>
+    </li>
 
     {% endif %}
-  </span>
+  </ul>
 </nav>

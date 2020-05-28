@@ -3,10 +3,6 @@
 <!-- block content-->
 {% block content %}
 <div id="main-page" class="welcome-section">
-  <nav class="navbar">
-    <h1 class="logo"><span></span> <a href="{% url 'main' %}">TravelApp</a></h1>
-  </nav>
-
   <section class="hero-section">
     <section class="text">
       <h2 class="title">
@@ -17,26 +13,59 @@
       </h2>
     </section>
 
-    {% include 'partials/_search_form.html' %}
-  </section>
+    <div id="search-form">
+      <form action="{% url 'city' %}" id="main-form">
+        <div id="place-form">
+          <label for="">Place</label>
+          <i class="fas fa-street-view"></i>
+          <input
+            type="text"
+            onfocus="this.value=''"
+            placeholder="Where do you want to go?"
+            id="place"
+            name="place"
+            required
+          />
+        </div>
 
-  <footer id="footer">
-    <section class="photo-credits">
-      Image by
-      <a
-        href="https://pixabay.com/users/tpsdave-12019/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1993704"
-        >David Mark</a
-      >
-    </section>
-    <section class="credits">
-      <p>
-        Made for Chingu Voyage 12
-        <a href="https://github.com/chingu-voyages/v17-toucans-team-02"
-          >Team Toucans 02</a
-        >
-      </p>
-    </section>
-  </footer>
+        <div class="row">
+          <div class="time-box">
+            <div id="arrive-form">
+              <label for="arrive">Arrive</label>
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <input
+                onfocus="this.value=''"
+                type="date"
+                name="trip-start"
+                id="arrive"
+                value=""
+                min="2020-04-08"
+                required
+              />
+            </div>
+
+            <div id="depart-form">
+              <label for="depart">Depart</label>
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <input
+                onfocus="this.value=''"
+                type="date"
+                name="trip-end"
+                id="depart"
+                value=""
+                min="2020-04-08"
+                required
+              />
+            </div>
+          </div>
+          <div id="submit" class="btn-search">
+            <i class="fas fa-search"></i>
+            <input type="submit" value="Search" class="btn-text" />
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
 </div>
 
 {% endblock %}

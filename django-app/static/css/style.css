@@ -13,12 +13,12 @@ body {
   font-size: 16px;
   line-height: 1.5;
   font-family: "Lato", sans-serif;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
     url("../img/maldives.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
-  background-size: cover;
+  background-size: cover; */
 }
 h1,
 h2,
@@ -49,7 +49,6 @@ p {
 }
 .navbar li {
   list-style: none;
-  padding-left: 1.75rem;
 }
 .navbar a {
   color: rgba(255, 255, 255);
@@ -61,13 +60,16 @@ p {
   flex-direction: row;
   padding-right: 1.5rem;
   align-items: center;
+  justify-content: space-between;
 }
-.user-name {
+.user-name,
+.register-link {
   padding-right: 1.5rem;
 }
 .btn-transp {
   border: 2px solid #cc4ac3;
-  padding: 0.35rem 1rem;
+  padding: 0.35rem 1.25rem;
+  text-align: center;
   background: transparent;
   font-size: 1.05rem;
   border-radius: 3px;
@@ -81,7 +83,13 @@ p {
 
 /* Login page  */
 .login-section,
-.hero-section {
+.logout-section,
+.hero-section,
+.pass-change-section,
+.change-done-section,
+.pass-reset-section,
+.reset-done-section,
+.reset-section {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -97,15 +105,23 @@ p {
   flex-direction: column;
   min-width: 350px;
   width: 500px;
-  height: 500px;
+  padding: 3.5rem 2.5rem;
+
   background: rgba(232, 232, 232, 0.9);
   border-radius: 6px;
   margin: auto;
   justify-content: center;
   align-items: center;
   color: rgba(0, 0, 0, 0.7);
+  text-align: center;
 }
 
+.forgotten {
+  padding-top: 1.5rem;
+}
+.forgotten a {
+  color: rgba(0, 0, 0, 0.8);
+}
 .avatar {
   max-width: 60px;
   padding-bottom: 2rem;
@@ -118,7 +134,19 @@ p {
 .card-title {
   padding-bottom: 1rem;
 }
-
+.login-section ul li {
+  list-style: none;
+  text-align: left;
+}
+#id_username,
+#id_password,
+#id_email,
+#id_new_password1 ,
+#id_new_password2 {
+  padding-left: 0.5rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
 /* dashboard */
 .dashboard {
   text-align: center;
@@ -155,11 +183,15 @@ input {
   cursor: pointer;
 }
 input[type="text"]:hover,
-input[type="date"]:hover {
+input[type="date"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover {
   border: 1px solid rgba(0, 0, 0, 0.3);
 }
 input[type="text"]:focus,
-input[type="date"]:focus {
+input[type="date"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
   border: 1px solid #ddddde;
   border-bottom: 5px solid #cc4ac3;
 }
@@ -277,14 +309,14 @@ footer a {
 }
 /* user account settings */
 
-.city {
+/* .city {
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
     url("../img/travel.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
-}
+} */
 
 #user-account {
   width: 100%;

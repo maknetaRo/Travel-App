@@ -25,7 +25,7 @@ def city(request):
     print(r)
     city_weather = {
         "city": city,
-        "temperature": r["main"]["temp"],
+        "temperature": round(r["main"]["temp"]),
         "description": r["weather"][0]["description"],
         "icon": r["weather"][0]["icon"],
     }

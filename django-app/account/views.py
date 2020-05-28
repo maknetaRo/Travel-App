@@ -1,8 +1,16 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login
 from .forms import LoginForm
 from django.contrib.auth.decorators import login_required
+
+
+# def register(request):
+#     return render(request, "account/register.html")
+
+
+# def login(request):
+#     return render(request, "account/login.html")
 
 
 def user_login(request):
@@ -24,6 +32,10 @@ def user_login(request):
     else:
         form = LoginForm()
     return render(request, "account/login.html", {"form": form})
+
+
+def logout(request):
+    return redirect("logout")
 
 
 @login_required
