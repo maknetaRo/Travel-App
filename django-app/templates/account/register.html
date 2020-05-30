@@ -3,22 +3,24 @@
 <!-- Title -->
 {% block title %}Rgister{% endblock %}
 
-<!-- login form -->
+<!-- create a new account form -->
 
 {% block content %}
-<section class="login-section">
+<div class="register-section">
   <div class="card">
     <figure class="avatar">
       <img src="{% static 'img/user.png' %}" alt="" />
     </figure>
-    <h2 class="card-title">Register</h2>
-    <form method="POST">
-      {{ form.as_p }} {% csrf_token %}
+    <h1>Create an account</h1>
+    <p>Please, sign up using the following form:</p>
+    <form method="post">
+      {{ user_form.as_p }}
+      {% csrf_token %}
       <div id="login" class="btn-login">
-        <p><input type="submit" value="Register" class="btn-text" /></p>
+        <p><input type="submit" value="Create my account" class="btn-text"></p>
       </div>
     </form>
-  </div>
-</section>
 
-{% endblock %}
+  </div>
+
+  {% endblock %}

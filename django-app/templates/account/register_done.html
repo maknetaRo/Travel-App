@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% load static %}
+
+<!-- Title -->
+{% block title %}Rgister{% endblock %}
+
+<!-- register done -->
+
+{% block content %}
+<section class="login-section">
+    <div class="card">
+        <figure class="avatar">
+            <img src="{% static 'img/user.png' %}" alt="" />
+        </figure>
+        <h2 class="card-title">Welcome {{ new_user.first_name }}</h2>
+        <p>Please, sign up using the following form:</p>
+        <p>Your account has been successfully created. Now you can
+            <a href="{% url 'login' %}">log in</a>.
+        </p>
+    </div>
+</section>
+
+{% endblock %}

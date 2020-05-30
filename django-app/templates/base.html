@@ -2,7 +2,7 @@
 <style>
   body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)),
-      url('{% static "img/maldives.jpg" %}');
+    url('{% static "img/maldives.jpg" %}');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
@@ -13,40 +13,30 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Travel</title>
 
-    <!-- CSS -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{% static 'css/style.css' %}"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Oxygen&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/658ee16d86.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <!-- Nav Bar -->
-    {% include 'partials/_navbar.html' %}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel</title>
 
-    <!-- Main Content -->
-    {% block content %} {% endblock %}
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Oxygen&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/658ee16d86.js" crossorigin="anonymous"></script>
+</head>
 
-    <!--footer -->
-    {% include 'partials/_footer.html' %}
+<body>
+  <!-- Nav Bar -->
+  {% include 'partials/_navbar.html' %}
 
-    <script src="{% static 'js/app.js' %}"></script>
-  </body>
+  <!-- Main Content -->
+  {% block content %} {% endblock %}
+
+  <!--footer -->
+  {% include 'partials/_footer.html' %}
+
+  <!-- <script src="{% static 'js/app.js' %}"></script> -->
+</body>
+
 </html>
