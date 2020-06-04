@@ -14,6 +14,10 @@
     <p>Your username and password didn't match. Please try again.</p>
     {% else %}
     <h2 class="card-title">Login to Your Account</h2>
+    <p>Please, use the following form to log-in. <br>
+      If you don't have an account
+      <a class="link-in-form" href=" {% url 'register' %}">register here</a></p>
+
     {% endif %}
     <form method="POST" action="{% url 'login' %}">
       {{ form.as_p }} {% csrf_token %}
@@ -22,9 +26,9 @@
         <p><input type="submit" value="Log In" class="btn-text" /></p>
       </div>
     </form>
-    <p class="forgotten">
-      <a href="{% url 'password_reset' %}">Forgotten your password?</a>
-    </p>
+    <div class="link-div">
+      <a class="link-in-form" href=" {% url 'password_reset' %}">Forgotten your password?</a>
+    </div>
   </div>
 </section>
 

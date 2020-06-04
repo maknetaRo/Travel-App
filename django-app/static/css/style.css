@@ -116,10 +116,7 @@ p {
   text-align: center;
 }
 
-.forgotten {
-  padding-top: 1.5rem;
-}
-.forgotten a {
+.link-in-form {
   color: rgba(0, 0, 0, 0.8);
 }
 .avatar {
@@ -129,6 +126,9 @@ p {
 
 .avatar img {
   width: 100%;
+}
+.link-div{
+  padding-top: 1.75rem;
 }
 
 .card-title {
